@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+
+{
+    char r,p,s,a,b,choix;
+    char menu(char);
+
+        p = prod(a,b);
+        printf("Le produit de %.2f et de %.2f est %.2f\n",a,b,p);
+    return 0;
+}
+
+char menu(char choix)
+{
+    char touche;
+    float r1,r2,res;
+    do {
+    printf("Choisissez une option\n\n");
+    printf("Saisies des resistances r1 et r2\t\tr\nResistance equivalente parallele\t\tp\nResistance equivalente serie\t\ts\nArret programme\t\ta\n\n");
+    touche = getch();
+    switch(touche)
+    {
+        case'r':
+        case'p': res=(r1*r2)/(r1+r2);
+        case's': res=r1+r2; printf("Les deux r�sistances sont en s�rie donc elles s'additionnent \nalors r1 + r2 = Rth\donc Rth = %.2f + %.2f = %.2f",r1,r2,res);break;
+        case'a': printf("Arret du programme en cour ...");break;
+
+    }
+
+    }
+    while(touche==default);
+}
+
